@@ -40,7 +40,7 @@ Ab dann wird jede Änderung auf `main` automatisch veröffentlicht.
 Die Seite enthält bereits: Titel & Beschreibung, Canonical-URL, Open-Graph-Vorschau, strukturierte Daten (LocalBusiness), `sitemap.xml`, `robots.txt`, HTTPS-/www-Weiterleitung.
 
 1. **Google Search Console**: https://search.google.com/search-console → *Property hinzufügen* → Typ **Domain** → `autotransport-europa.ch`.
-2. Google zeigt einen TXT-Eintrag (`google-site-verification=...`). Diesen im Hostpoint Control Panel unter **Domains → DNS-Einträge** als **TXT** für `@` eintragen, dann in der Search Console auf *Bestätigen* klicken (kann bis zu einigen Stunden dauern).
+2. Google zeigt einen TXT-Eintrag (`google-site-verification=...`). Diesen bei Cloudflare unter **DNS → Records** als **TXT** für `@` eintragen, dann in der Search Console auf *Bestätigen* klicken (kann bis zu einigen Stunden dauern).
 3. Links unter **Sitemaps** `sitemap.xml` einreichen.
 4. Unter **URL-Prüfung** `https://www.autotransport-europa.ch/` eingeben → *Indexierung beantragen*.
 5. **Google Unternehmensprofil** (https://business.google.com) anlegen, mit gleicher Adresse und Telefonnummer wie auf der Webseite. Das ist der wichtigste Schritt für lokale Suchen wie «Autotransport Bern» und für Google Maps.
