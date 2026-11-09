@@ -1,6 +1,6 @@
 # autotransport-europa.ch
 
-Onepage-Webseite (plus Seite für Impressum & Datenschutz). Reines HTML/CSS/JS, kein Build nötig. Kontakt läuft direkt über WhatsApp, Telefon, Viber, Telegram und E-Mail (kein Formular).
+Onepage-Webseite (plus Seite für Impressum & Datenschutz). Reines HTML/CSS/JS, kein Build nötig. Gehostet auf Cloudflare Pages (automatisch bei jedem Push auf `main`). Kontakt läuft direkt über WhatsApp, Telefon, Viber, Telegram und E-Mail (kein Formular).
 
 ## Struktur
 
@@ -12,8 +12,8 @@ css/style.css       Design (Farben ganz oben unter :root)
 js/main.js          Menü, Galerie-Lightbox, Animationen
 fonts/              Schriften (lokal, datenschutzfreundlich)
 img/                Bilder und Logo (logo.svg) (Platzhalter, gleich benannt ersetzen)
-robots.txt, sitemap.xml, .htaccess   SEO und Weiterleitungen
-.github/workflows/deploy.yml         Automatischer Upload zu Hostpoint
+robots.txt, sitemap.xml   SEO
+_headers            Caching-Regeln für Cloudflare
 ```
 
 ## Texte und Bilder ersetzen
@@ -24,13 +24,16 @@ robots.txt, sitemap.xml, .htaccess   SEO und Weiterleitungen
 - Farben ändern: `--accent` usw. ganz oben in `css/style.css` (Braun #8B7355 (burlywood4) mit Verlauf, Babyblau #6CA6CD, Off-White #F6EFE4).
 - Schreibschrift für Highlight-Wörter: Wort in `<span class="script">…</span>` setzen. Schriften liegen lokal in `fonts/` (Outfit + Allura, beide frei unter OFL), kein Google-Fonts-Aufruf nötig.
 
-## Veröffentlichen auf Hostpoint (automatisch via GitHub)
+## Veröffentlichen mit Cloudflare Pages
 
-1. Im Hostpoint Control Panel unter **Webhosting → FTP-Benutzer** einen FTP-Benutzer anlegen (oder den bestehenden nehmen). Notieren: Server, Benutzername, Passwort.
-2. Prüfen, in welchem Ordner die Domain liegt (**Domains → autotransport-europa.ch → Zielverzeichnis**, z. B. `www/autotransport-europa.ch`). Falls abweichend, `server-dir` in `.github/workflows/deploy.yml` anpassen.
-3. Im GitHub-Repo unter **Settings → Secrets and variables → Actions** drei Secrets anlegen: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`.
-4. Ab jetzt wird bei jedem Push auf `main` automatisch hochgeladen. Status unter dem Tab **Actions**.
-5. SSL: Im Control Panel für die Domain das kostenlose **Let's Encrypt-Zertifikat** aktivieren (die `.htaccess` leitet dann auf `https://www.` um).
+1. Cloudflare Dashboard → **Workers & Pages** → **Create** → Tab **Pages** → **Connect to Git** → Repo `autotransport-europa.ch` wählen.
+2. Einstellungen: Framework preset **None**, Build command **leer lassen**, Build output directory **`/`**. → **Save and Deploy**. Die Seite ist danach unter `*.pages.dev` erreichbar.
+3. Domain zu Cloudflare: **Add a domain** → `autotransport-europa.ch` → Free-Plan. Cloudflare zeigt zwei Nameserver.
+4. Bei Hostpoint (Control Panel → Domains → autotransport-europa.ch → **Nameserver**) die beiden Cloudflare-Nameserver eintragen. Dauert bis zu 24 h.
+5. Im Pages-Projekt → **Custom domains** → `www.autotransport-europa.ch` und `autotransport-europa.ch` hinzufügen. SSL macht Cloudflare automatisch.
+6. Optional: Unter **Rules → Redirect Rules** `autotransport-europa.ch` → `https://www.autotransport-europa.ch` (301) weiterleiten.
+
+Ab dann wird jede Änderung auf `main` automatisch veröffentlicht.
 
 ## Sichtbar auf Google
 
