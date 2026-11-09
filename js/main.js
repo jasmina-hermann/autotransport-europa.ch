@@ -19,7 +19,7 @@ if (toggle && nav) {
 }
 
 // Einblend-Animation
-const revealEls = document.querySelectorAll('.section-head, .tile, .steps li, .gallery a, .about > *, .contact > *');
+const revealEls = document.querySelectorAll('.section-head, .tile, .steps li, .gallery a, .phone-mockup, .contact-btn');
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver(entries => entries.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
@@ -38,33 +38,7 @@ document.querySelectorAll('.gallery a').forEach(link => link.addEventListener('c
   document.body.appendChild(box);
 }));
 
-// Kontaktformular (sendet an kontakt.php, ohne Seitenwechsel)
-const form = document.querySelector('.contact-form');
-if (form) {
-  form.addEventListener('submit', async e => {
-    e.preventDefault();
-    const status = form.querySelector('.form-status');
-    const btn = form.querySelector('button[type=submit]');
-    btn.disabled = true;
-    status.textContent = 'Wird gesendet …';
-    try {
-      const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
-      const data = await res.json();
-      status.textContent = data.message;
-      if (data.ok) form.reset();
-    } catch {
-      status.textContent = 'Senden fehlgeschlagen. Bitte rufen Sie uns an oder schreiben Sie eine E-Mail.';
-    }
-    btn.disabled = false;
-  });
-}
-
 // Jahr im Footer
 const y = document.getElementById('year');
 if (y) y.textContent = new Date().getFullYear();
 
-// Kachel-Buttons wählen die passende Transportart im Formular vor
-document.querySelectorAll('[data-art]').forEach(a => a.addEventListener('click', () => {
-  const sel = document.querySelector('select[name=art]');
-  if (sel) sel.value = a.dataset.art;
-}));
