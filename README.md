@@ -11,7 +11,7 @@ kontakt.php         Versand des Kontaktformulars per E-Mail
 css/style.css       Design (Farben ganz oben unter :root)
 js/main.js          Menü, Galerie-Lightbox, Formular
 fonts/              Schriften (lokal, datenschutzfreundlich)
-img/                Bilder (Platzhalter, gleich benannt ersetzen)
+img/                Bilder und Logo (logo.svg) (Platzhalter, gleich benannt ersetzen)
 robots.txt, sitemap.xml, .htaccess   SEO und Weiterleitungen
 .github/workflows/deploy.yml         Automatischer Upload zu Hostpoint
 ```

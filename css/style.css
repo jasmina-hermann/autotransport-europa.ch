@@ -64,7 +64,7 @@ p { margin: 0 0 1em; }
 .site-header.scrolled { box-shadow: 0 1px 0 var(--line), 0 6px 20px rgba(0,0,0,.15); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: 76px; }
 .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-.logo-mark { display: grid; place-items: center; width: 40px; height: 40px; background: linear-gradient(135deg, var(--accent-light), var(--accent)); color: var(--bg-deep); font-weight: 800; border-radius: 9px; box-shadow: 0 0 14px var(--glow); }
+.logo-mark { display: block; width: auto; height: 54px; }
 .logo-text { text-transform: uppercase; letter-spacing: .08em; font-size: .95rem; font-weight: 600; }
 .logo-text strong { color: var(--accent-text); margin-left: 2px; }
 .main-nav { display: flex; align-items: center; gap: 28px; }
@@ -151,6 +151,7 @@ p { margin: 0 0 1em; }
 .footer-grid h4 { color: var(--text); text-transform: uppercase; letter-spacing: .12em; font-size: .8rem; }
 .footer-grid a:not(.logo), .footer-grid span:not(.logo-mark):not(.logo-text) { display: block; text-decoration: none; margin-bottom: 8px; }
 .footer-grid a:hover { color: var(--accent-text); }
+.footer-grid .logo .logo-mark { height: 70px; }
 .footer-grid .logo { margin-bottom: 14px; color: var(--text); }
 .footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-top: 50px; padding-top: 22px; padding-bottom: 22px; border-top: 1px solid var(--line); font-size: .82rem; }
 
