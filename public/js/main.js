@@ -1,3 +1,10 @@
+// Beschriftungen je nach Sprache der Seite
+const L = ({
+  en: { start: 'Start slideshow', pause: 'Pause slideshow', full: 'Full-size image', prev: 'Previous image', next: 'Next image', close: 'Close' },
+  it: { start: 'Avvia la presentazione', pause: 'Metti in pausa', full: 'Immagine a schermo intero', prev: 'Immagine precedente', next: 'Immagine successiva', close: 'Chiudi' },
+  bs: { start: 'Pokreni prezentaciju', pause: 'Pauziraj prezentaciju', full: 'Slika u punoj veličini', prev: 'Prethodna slika', next: 'Sljedeća slika', close: 'Zatvori' }
+})[document.documentElement.lang.slice(0, 2)] || { start: 'Slideshow starten', pause: 'Slideshow pausieren', full: 'Bild in Vollansicht', prev: 'Vorheriges Bild', next: 'Nächstes Bild', close: 'Schliessen' };
+
 // Header-Hintergrund beim Scrollen
 const header = document.querySelector('.site-header');
 const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
@@ -88,7 +95,7 @@ if (show) {
   function setPaused(p) {
     userPaused = p;
     show.classList.toggle('paused', p);
-    playBtn.setAttribute('aria-label', p ? 'Slideshow starten' : 'Slideshow pausieren');
+    playBtn.setAttribute('aria-label', p ? L.start : L.pause);
     show.querySelector('.slides').setAttribute('aria-live', p ? 'polite' : 'off');
     schedule();
   }
@@ -142,12 +149,12 @@ if (show) {
     box.className = 'lightbox';
     box.setAttribute('role', 'dialog');
     box.setAttribute('aria-modal', 'true');
-    box.setAttribute('aria-label', 'Bild in Vollansicht');
+    box.setAttribute('aria-label', L.full);
     box.innerHTML = `
       <img src="" alt="">
-      <button type="button" class="ss-btn ss-prev" aria-label="Vorheriges Bild"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
-      <button type="button" class="ss-btn ss-next" aria-label="Nächstes Bild"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
-      <button type="button" class="ss-btn lb-close" aria-label="Schliessen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      <button type="button" class="ss-btn ss-prev" aria-label="${L.prev}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button type="button" class="ss-btn ss-next" aria-label="${L.next}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      <button type="button" class="ss-btn lb-close" aria-label="${L.close}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
       <p class="lb-caption"></p>`;
     const img = box.querySelector('img');
     const cap = box.querySelector('.lb-caption');

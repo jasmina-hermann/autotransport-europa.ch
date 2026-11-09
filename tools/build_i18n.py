@@ -14,9 +14,9 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent / "public"
 SRC = ROOT / "index.html"
 
 LANGS = {
-    "en": {"locale": "en_GB", "html": "en"},
-    "it": {"locale": "it_CH", "html": "it"},
-    "bs": {"locale": "bs_BA", "html": "bs"},
+    "en": {"locale": "en_GB", "html": "en", "of": "of", "show": "Show image {}"},
+    "it": {"locale": "it_CH", "html": "it", "of": "di", "show": "Mostra immagine {}"},
+    "bs": {"locale": "bs_BA", "html": "bs", "of": "od", "show": "Prikaži sliku {}"},
 }
 
 # (Deutsch, Englisch, Italienisch, Bosnisch/Kroatisch). Längere Texte zuerst prüfen.
@@ -57,12 +57,51 @@ TEXTS = [
      'alt="SUV towing a car trailer carrying two saloon cars"',
      'alt="SUV che traina un rimorchio con due berline"',
      'alt="Terenac vuče prikolicu s dvije limuzine"'),
-    ('alt="Autotransport mit Anhänger"', 'alt="Car transport by trailer"', 'alt="Trasporto auto con rimorchio"', 'alt="Prijevoz automobila prikolicom"'),
-    ('alt="Fahrzeug sicher verzurrt"', 'alt="Vehicle securely strapped down"', 'alt="Veicolo fissato in sicurezza"', 'alt="Sigurno pričvršćeno vozilo"'),
-    ('alt="Fahrzeugüberführung"', 'alt="Vehicle delivery"', 'alt="Trasferimento del veicolo"', 'alt="Prijevoz vozila"'),
-    ('alt="Abholung beim Händler"', 'alt="Pick-up at the dealer"', 'alt="Ritiro presso il concessionario"', 'alt="Preuzimanje kod prodavača"'),
-    ('alt="Transport in Europa"', 'alt="Transport in Europe"', 'alt="Trasporto in Europa"', 'alt="Prijevoz u Europi"'),
-    ('alt="Übergabe beim Kunden"', 'alt="Handover to the customer"', 'alt="Consegna al cliente"', 'alt="Predaja kupcu"'),
+    # Galerie-Slideshow
+    ('alt="20-Fuss-Container sicher gesichert"', 'alt="20-foot container securely fastened"', 'alt="Container da 20 piedi fissato in sicurezza"', 'alt="Kontejner od 20 stopa sigurno učvršćen"'),
+    ('alt="Anhänger abgesenkt, bereit zum Verladen"', 'alt="Trailer lowered, ready for loading"', 'alt="Rimorchio abbassato, pronto per il carico"', 'alt="Spuštena prikolica, spremna za utovar"'),
+    ('alt="Audi Q7 auf dem Autoanhänger"', 'alt="Audi Q7 on the car trailer"', 'alt="Audi Q7 sul rimorchio"', 'alt="Audi Q7 na auto prikolici"'),
+    ('alt="Audi RS6 Abholung beim Autohaus"', 'alt="Audi RS6 pick-up at the dealership"', 'alt="Ritiro di un\'Audi RS6 dal concessionario"', 'alt="Preuzimanje Audija RS6 u autosalonu"'),
+    ('alt="Audi RS6 bei der Abholung beim Händler"', 'alt="Audi RS6 being collected from the dealer"', 'alt="Audi RS6 al ritiro dal concessionario"', 'alt="Audi RS6 pri preuzimanju kod prodavača"'),
+    ('alt="BMW 3er bei der Abholung beim Autohändler"', 'alt="BMW 3 Series being collected from the car dealer"', 'alt="BMW Serie 3 al ritiro dal concessionario"', 'alt="BMW serije 3 pri preuzimanju kod prodavača"'),
+    ('alt="BMW 3er sicher verzurrt auf dem Anhänger"', 'alt="BMW 3 Series securely strapped on the trailer"', 'alt="BMW Serie 3 fissata in sicurezza sul rimorchio"', 'alt="BMW serije 3 sigurno pričvršćen na prikolici"'),
+    ('alt="BMW X6 sicher auf dem Autoanhänger"', 'alt="BMW X6 secured on the car trailer"', 'alt="BMW X6 fissata sul rimorchio"', 'alt="BMW X6 sigurno na auto prikolici"'),
+    ('alt="Container-Transport mit dem Dreiachs-Anhänger"', 'alt="Container transport with the three-axle trailer"', 'alt="Trasporto container con il rimorchio a tre assi"', 'alt="Prijevoz kontejnera troosovinskom prikolicom"'),
+    ('alt="Doppeltransport BMW und Hyundai bei Sonnenschein"', 'alt="Double transport of a BMW and a Hyundai in the sunshine"', 'alt="Doppio trasporto BMW e Hyundai sotto il sole"', 'alt="Dvostruki prijevoz BMW-a i Hyundaija po suncu"'),
+    ('alt="Doppeltransport bei Nacht"', 'alt="Double transport at night"', 'alt="Doppio trasporto di notte"', 'alt="Dvostruki prijevoz noću"'),
+    ('alt="Doppeltransport in der Nacht"', 'alt="Double transport during the night"', 'alt="Doppio trasporto nella notte"', 'alt="Dvostruki prijevoz u noći"'),
+    ('alt="Doppeltransport mit zwei BMW Limousinen"', 'alt="Double transport with two BMW saloons"', 'alt="Doppio trasporto con due berline BMW"', 'alt="Dvostruki prijevoz s dvije BMW limuzine"'),
+    ('alt="Einzeltransport auf dem Tandem-Anhänger"', 'alt="Single transport on the tandem trailer"', 'alt="Trasporto singolo sul rimorchio tandem"', 'alt="Pojedinačni prijevoz na tandem prikolici"'),
+    ('alt="Fahrzeugtransport mit Mercedes A-Klasse"', 'alt="Vehicle transport with a Mercedes A-Class"', 'alt="Trasporto di una Mercedes Classe A"', 'alt="Prijevoz Mercedesa A-klase"'),
+    ('alt="Gespann bei Sonnenuntergang auf dem Weg zur Abholung"', 'alt="Car and trailer at sunset on the way to a pick-up"', 'alt="Auto con rimorchio al tramonto, in viaggio verso il ritiro"', 'alt="Vozilo s prikolicom u zalazak sunca na putu do preuzimanja"'),
+    ('alt="Kastenwagen auf dem Anhänger, Nachtfahrt"', 'alt="Van on the trailer, night drive"', 'alt="Furgone sul rimorchio, viaggio notturno"', 'alt="Kombi na prikolici, noćna vožnja"'),
+    ('alt="Mercedes A-Klasse bei der Abholung in der Werkstatt"', 'alt="Mercedes A-Class being collected from the garage"', 'alt="Mercedes Classe A al ritiro in officina"', 'alt="Mercedes A-klase pri preuzimanju u radionici"'),
+    ('alt="Mercedes SUV wird auf den Anhänger gezogen"', 'alt="Mercedes SUV being winched onto the trailer"', 'alt="SUV Mercedes tirato sul rimorchio"', 'alt="Mercedes SUV se povlači na prikolicu"'),
+    ('alt="Mercedes Vito auf dem Autoanhänger"', 'alt="Mercedes Vito on the car trailer"', 'alt="Mercedes Vito sul rimorchio"', 'alt="Mercedes Vito na auto prikolici"'),
+    ('alt="Nachtfahrt mit beleuchtetem Autoanhänger"', 'alt="Night drive with an illuminated car trailer"', 'alt="Viaggio notturno con rimorchio illuminato"', 'alt="Noćna vožnja s osvijetljenom auto prikolicom"'),
+    ('alt="Porsche Cayenne auf dem Autoanhänger"', 'alt="Porsche Cayenne on the car trailer"', 'alt="Porsche Cayenne sul rimorchio"', 'alt="Porsche Cayenne na auto prikolici"'),
+    ('alt="Porsche Cayenne auf dem Weg zum Kunden"', 'alt="Porsche Cayenne on the way to the customer"', 'alt="Porsche Cayenne in viaggio verso il cliente"', 'alt="Porsche Cayenne na putu do kupca"'),
+    ('alt="Porsche Cayenne bei der Übergabe"', 'alt="Porsche Cayenne at handover"', 'alt="Porsche Cayenne alla consegna"', 'alt="Porsche Cayenne pri predaji"'),
+    ('alt="Porsche Cayenne bereit für die Überführung"', 'alt="Porsche Cayenne ready for delivery"', 'alt="Porsche Cayenne pronta per il trasferimento"', 'alt="Porsche Cayenne spreman za prijevoz"'),
+    ('alt="Porsche Cayenne wird verzurrt"', 'alt="Porsche Cayenne being strapped down"', 'alt="Porsche Cayenne in fase di fissaggio"', 'alt="Porsche Cayenne se pričvršćuje"'),
+    ('alt="Porsche Panamera auf dem Dreiachs-Anhänger"', 'alt="Porsche Panamera on the three-axle trailer"', 'alt="Porsche Panamera sul rimorchio a tre assi"', 'alt="Porsche Panamera na troosovinskoj prikolici"'),
+    ('alt="Porsche Panamera bei Nacht unterwegs"', 'alt="Porsche Panamera on the road at night"', 'alt="Porsche Panamera in viaggio di notte"', 'alt="Porsche Panamera noću na putu"'),
+    ('alt="Transport von mehreren Rasentraktoren"', 'alt="Transport of several ride-on lawn mowers"', 'alt="Trasporto di diversi trattorini tosaerba"', 'alt="Prijevoz više traktorskih kosilica"'),
+    ('alt="Transporter-Überführung beim Autohaus"', 'alt="Van delivery at the dealership"', 'alt="Trasferimento di un furgone dal concessionario"', 'alt="Prijevoz kombija u autosalonu"'),
+    ('alt="Unterwegs auch im Winter bei Schnee"', 'alt="On the road in winter too, even in snow"', 'alt="In viaggio anche d\'inverno con la neve"', 'alt="Na putu i zimi po snijegu"'),
+    ('alt="Unterwegs bei Schneefall in der Nacht"', 'alt="On the road in falling snow at night"', 'alt="In viaggio di notte sotto la neve"', 'alt="Na putu noću dok pada snijeg"'),
+    ('alt="Verladen mit der Seilwinde direkt vor der Garage"', 'alt="Loading with the winch right outside the garage"', 'alt="Carico con il verricello davanti al garage"', 'alt="Utovar vitlom ispred garaže"'),
+    ('alt="Zwei BMW 3er unterwegs, Pause am See"', 'alt="Two BMW 3 Series on the road, break by the lake"', 'alt="Due BMW Serie 3 in viaggio, pausa al lago"', 'alt="Dva BMW-a serije 3 na putu, pauza kraj jezera"'),
+    ('alt="Zwei Fahrzeuge auf dem Dreiachs-Autoanhänger"', 'alt="Two vehicles on the three-axle car trailer"', 'alt="Due veicoli sul rimorchio a tre assi"', 'alt="Dva vozila na troosovinskoj auto prikolici"'),
+    ('alt="Zwei Fiat 500 auf dem Dreiachs-Anhänger"', 'alt="Two Fiat 500s on the three-axle trailer"', 'alt="Due Fiat 500 sul rimorchio a tre assi"', 'alt="Dva Fiata 500 na troosovinskoj prikolici"'),
+    ('alt="Zwei Gespanne mit je zwei Autos beim Tankstopp"', 'alt="Two rigs with two cars each at a fuel stop"', 'alt="Due convogli con due auto ciascuno durante il rifornimento"', 'alt="Dvije prikolice s po dva auta na točenju goriva"'),
+    ('alt="Zwei Kleinwagen sicher verzurrt im Schnee"', 'alt="Two small cars securely strapped down in the snow"', 'alt="Due utilitarie fissate in sicurezza nella neve"', 'alt="Dva mala auta sigurno pričvršćena u snijegu"'),
+    ('alt="Zwei Transporter auf der Fahrt durch die Alpen"', 'alt="Two vans on the drive through the Alps"', 'alt="Due furgoni in viaggio attraverso le Alpi"', 'alt="Dva kombija na vožnji kroz Alpe"'),
+    ('aria-label="Fotogalerie Autotransporte"', 'aria-label="Photo gallery of car transports"', 'aria-label="Galleria fotografica dei trasporti"', 'aria-label="Galerija fotografija prijevoza"'),
+    ('aria-roledescription="Bild"', 'aria-roledescription="Image"', 'aria-roledescription="Immagine"', 'aria-roledescription="Slika"'),
+    ('aria-label="Vorheriges Bild"', 'aria-label="Previous image"', 'aria-label="Immagine precedente"', 'aria-label="Prethodna slika"'),
+    ('aria-label="Nächstes Bild"', 'aria-label="Next image"', 'aria-label="Immagine successiva"', 'aria-label="Sljedeća slika"'),
+    ('aria-label="Slideshow pausieren"', 'aria-label="Pause slideshow"', 'aria-label="Metti in pausa"', 'aria-label="Pauziraj prezentaciju"'),
 
     # Startbereich
     (">Schweiz · Europa<", ">Switzerland · Europe<", ">Svizzera · Europa<", ">Švicarska · Europa<"),
@@ -226,6 +265,10 @@ def build(lang, idx):
     # relative Pfade eine Ebene höher
     html = re.sub(r'(href|src)="(css|js|img|fonts)/', r'\1="../\2/', html)
     html = re.sub(r'href="(agb|impressum)\.html', r'href="../\1.html', html)
+
+    # Slideshow-Zähler und Vorschaubilder
+    html = re.sub(r'aria-label="(\d+) von (\d+)"', lambda m: f'aria-label="{m[1]} {cfg["of"]} {m[2]}"', html)
+    html = re.sub(r'aria-label="Bild (\d+) anzeigen"', lambda m: f'aria-label="{cfg["show"].format(m[1])}"', html)
 
     left = [r[0] for r in TEXTS if r[0] in html and r[0] != r[idx]]
     if left:

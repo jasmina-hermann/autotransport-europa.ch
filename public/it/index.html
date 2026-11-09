@@ -184,20 +184,107 @@
 </section>
 
 <!-- ================= GALERIE =================
-     Bilder in img/galerie-1.jpg bis galerie-6.jpg ersetzen -->
+     Slideshow. Bilder liegen in img/galerie/ (gross) und img/galerie/thumbs/ (Vorschau 240 x 180).
+     Neues Bild: Datei in beide Ordner legen und je eine Zeile bei "slides" und "ss-thumbs" kopieren. -->
 <section class="section" id="galerie">
   <div class="container">
     <header class="section-head">
       <p class="eyebrow">Galleria</p>
       <h2>Uno sguardo ai miei <span class="script">trasporti</span></h2>
     </header>
-    <div class="gallery">
-      <a href="../img/galerie-1.jpg"><img src="../img/galerie-1.jpg" alt="Trasporto auto con rimorchio" loading="lazy" width="1200" height="900"></a>
-      <a href="../img/galerie-2.jpg"><img src="../img/galerie-2.jpg" alt="Veicolo fissato in sicurezza" loading="lazy" width="1200" height="900"></a>
-      <a href="../img/galerie-3.jpg"><img src="../img/galerie-3.jpg" alt="Trasferimento del veicolo" loading="lazy" width="1200" height="900"></a>
-      <a href="../img/galerie-4.jpg"><img src="../img/galerie-4.jpg" alt="Ritiro presso il concessionario" loading="lazy" width="1200" height="900"></a>
-      <a href="../img/galerie-5.jpg"><img src="../img/galerie-5.jpg" alt="Trasporto in Europa" loading="lazy" width="1200" height="900"></a>
-      <a href="../img/galerie-6.jpg"><img src="../img/galerie-6.jpg" alt="Consegna al cliente" loading="lazy" width="1200" height="900"></a>
+    <div class="slideshow" aria-roledescription="Slideshow" aria-label="Galleria fotografica dei trasporti" data-interval="5000">
+      <div class="ss-stage">
+        <div class="ss-backdrop" aria-hidden="true"></div>
+        <div class="slides" aria-live="off">
+          <figure class="slide is-active" role="group" aria-roledescription="Immagine" aria-label="1 di 39"><a href="../img/galerie/transport-01.jpg"><img src="../img/galerie/transport-01.jpg" alt="Due veicoli sul rimorchio a tre assi" width="1280" height="960" loading="eager" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="2 di 39"><a href="../img/galerie/transport-02.jpg"><img src="../img/galerie/transport-02.jpg" alt="Due BMW Serie 3 in viaggio, pausa al lago" width="1280" height="960" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="3 di 39"><a href="../img/galerie/transport-03.jpg"><img src="../img/galerie/transport-03.jpg" alt="Doppio trasporto con due berline BMW" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="4 di 39"><a href="../img/galerie/transport-04.jpg"><img src="../img/galerie/transport-04.jpg" alt="BMW Serie 3 fissata in sicurezza sul rimorchio" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="5 di 39"><a href="../img/galerie/transport-05.jpg"><img src="../img/galerie/transport-05.jpg" alt="Trasporto singolo sul rimorchio tandem" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="6 di 39"><a href="../img/galerie/transport-06.jpg"><img src="../img/galerie/transport-06.jpg" alt="Carico con il verricello davanti al garage" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="7 di 39"><a href="../img/galerie/transport-07.jpg"><img src="../img/galerie/transport-07.jpg" alt="SUV Mercedes tirato sul rimorchio" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="8 di 39"><a href="../img/galerie/transport-08.jpg"><img src="../img/galerie/transport-08.jpg" alt="Mercedes Classe A al ritiro in officina" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="9 di 39"><a href="../img/galerie/transport-09.jpg"><img src="../img/galerie/transport-09.jpg" alt="Trasporto di una Mercedes Classe A" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="10 di 39"><a href="../img/galerie/transport-10.jpg"><img src="../img/galerie/transport-10.jpg" alt="Auto con rimorchio al tramonto, in viaggio verso il ritiro" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="11 di 39"><a href="../img/galerie/transport-11.jpg"><img src="../img/galerie/transport-11.jpg" alt="Porsche Cayenne sul rimorchio" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="12 di 39"><a href="../img/galerie/transport-12.jpg"><img src="../img/galerie/transport-12.jpg" alt="Porsche Cayenne pronta per il trasferimento" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="13 di 39"><a href="../img/galerie/transport-13.jpg"><img src="../img/galerie/transport-13.jpg" alt="Due Fiat 500 sul rimorchio a tre assi" width="1158" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="14 di 39"><a href="../img/galerie/transport-14.jpg"><img src="../img/galerie/transport-14.jpg" alt="Viaggio notturno con rimorchio illuminato" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="15 di 39"><a href="../img/galerie/transport-15.jpg"><img src="../img/galerie/transport-15.jpg" alt="In viaggio anche d'inverno con la neve" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="16 di 39"><a href="../img/galerie/transport-16.jpg"><img src="../img/galerie/transport-16.jpg" alt="Rimorchio abbassato, pronto per il carico" width="1280" height="960" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="17 di 39"><a href="../img/galerie/transport-17.jpg"><img src="../img/galerie/transport-17.jpg" alt="BMW Serie 3 al ritiro dal concessionario" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="18 di 39"><a href="../img/galerie/transport-18.jpg"><img src="../img/galerie/transport-18.jpg" alt="Doppio trasporto nella notte" width="1280" height="960" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="19 di 39"><a href="../img/galerie/transport-19.jpg"><img src="../img/galerie/transport-19.jpg" alt="Porsche Cayenne alla consegna" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="20 di 39"><a href="../img/galerie/transport-20.jpg"><img src="../img/galerie/transport-20.jpg" alt="Audi Q7 sul rimorchio" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="21 di 39"><a href="../img/galerie/transport-21.jpg"><img src="../img/galerie/transport-21.jpg" alt="Furgone sul rimorchio, viaggio notturno" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="22 di 39"><a href="../img/galerie/transport-22.jpg"><img src="../img/galerie/transport-22.jpg" alt="In viaggio di notte sotto la neve" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="23 di 39"><a href="../img/galerie/transport-23.jpg"><img src="../img/galerie/transport-23.jpg" alt="Due utilitarie fissate in sicurezza nella neve" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="24 di 39"><a href="../img/galerie/transport-24.jpg"><img src="../img/galerie/transport-24.jpg" alt="Trasferimento di un furgone dal concessionario" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="25 di 39"><a href="../img/galerie/transport-25.jpg"><img src="../img/galerie/transport-25.jpg" alt="Mercedes Vito sul rimorchio" width="988" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="26 di 39"><a href="../img/galerie/transport-26.jpg"><img src="../img/galerie/transport-26.jpg" alt="Due furgoni in viaggio attraverso le Alpi" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="27 di 39"><a href="../img/galerie/transport-27.jpg"><img src="../img/galerie/transport-27.jpg" alt="Doppio trasporto di notte" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="28 di 39"><a href="../img/galerie/transport-28.jpg"><img src="../img/galerie/transport-28.jpg" alt="Trasporto container con il rimorchio a tre assi" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="29 di 39"><a href="../img/galerie/transport-29.jpg"><img src="../img/galerie/transport-29.jpg" alt="Container da 20 piedi fissato in sicurezza" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="30 di 39"><a href="../img/galerie/transport-30.jpg"><img src="../img/galerie/transport-30.jpg" alt="Ritiro di un'Audi RS6 dal concessionario" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="31 di 39"><a href="../img/galerie/transport-31.jpg"><img src="../img/galerie/transport-31.jpg" alt="Doppio trasporto BMW e Hyundai sotto il sole" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="32 di 39"><a href="../img/galerie/transport-32.jpg"><img src="../img/galerie/transport-32.jpg" alt="Audi RS6 al ritiro dal concessionario" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="33 di 39"><a href="../img/galerie/transport-33.jpg"><img src="../img/galerie/transport-33.jpg" alt="BMW X6 fissata sul rimorchio" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="34 di 39"><a href="../img/galerie/transport-34.jpg"><img src="../img/galerie/transport-34.jpg" alt="Due convogli con due auto ciascuno durante il rifornimento" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="35 di 39"><a href="../img/galerie/transport-35.jpg"><img src="../img/galerie/transport-35.jpg" alt="Trasporto di diversi trattorini tosaerba" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="36 di 39"><a href="../img/galerie/transport-36.jpg"><img src="../img/galerie/transport-36.jpg" alt="Porsche Cayenne in fase di fissaggio" width="724" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="37 di 39"><a href="../img/galerie/transport-37.jpg"><img src="../img/galerie/transport-37.jpg" alt="Porsche Panamera in viaggio di notte" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="38 di 39"><a href="../img/galerie/transport-38.jpg"><img src="../img/galerie/transport-38.jpg" alt="Porsche Panamera sul rimorchio a tre assi" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Immagine" aria-label="39 di 39"><a href="../img/galerie/transport-39.jpg"><img src="../img/galerie/transport-39.jpg" alt="Porsche Cayenne in viaggio verso il cliente" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+        </div>
+        <button type="button" class="ss-btn ss-prev" aria-label="Immagine precedente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button type="button" class="ss-btn ss-next" aria-label="Immagine successiva"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        <div class="ss-bar">
+          <button type="button" class="ss-play" aria-label="Metti in pausa"><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5l12 7-12 7z"/></svg></button>
+          <span class="ss-counter"><b>1</b> / 39</span>
+        </div>
+        <div class="ss-progress" aria-hidden="true"><span></span></div>
+      </div>
+      <div class="ss-thumbs">
+        <button type="button" class="ss-thumb" aria-current="true" aria-label="Mostra immagine 1"><img src="../img/galerie/thumbs/transport-01.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 2"><img src="../img/galerie/thumbs/transport-02.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 3"><img src="../img/galerie/thumbs/transport-03.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 4"><img src="../img/galerie/thumbs/transport-04.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 5"><img src="../img/galerie/thumbs/transport-05.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 6"><img src="../img/galerie/thumbs/transport-06.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 7"><img src="../img/galerie/thumbs/transport-07.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 8"><img src="../img/galerie/thumbs/transport-08.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 9"><img src="../img/galerie/thumbs/transport-09.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 10"><img src="../img/galerie/thumbs/transport-10.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 11"><img src="../img/galerie/thumbs/transport-11.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 12"><img src="../img/galerie/thumbs/transport-12.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 13"><img src="../img/galerie/thumbs/transport-13.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 14"><img src="../img/galerie/thumbs/transport-14.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 15"><img src="../img/galerie/thumbs/transport-15.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 16"><img src="../img/galerie/thumbs/transport-16.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 17"><img src="../img/galerie/thumbs/transport-17.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 18"><img src="../img/galerie/thumbs/transport-18.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 19"><img src="../img/galerie/thumbs/transport-19.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 20"><img src="../img/galerie/thumbs/transport-20.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 21"><img src="../img/galerie/thumbs/transport-21.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 22"><img src="../img/galerie/thumbs/transport-22.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 23"><img src="../img/galerie/thumbs/transport-23.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 24"><img src="../img/galerie/thumbs/transport-24.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 25"><img src="../img/galerie/thumbs/transport-25.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 26"><img src="../img/galerie/thumbs/transport-26.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 27"><img src="../img/galerie/thumbs/transport-27.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 28"><img src="../img/galerie/thumbs/transport-28.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 29"><img src="../img/galerie/thumbs/transport-29.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 30"><img src="../img/galerie/thumbs/transport-30.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 31"><img src="../img/galerie/thumbs/transport-31.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 32"><img src="../img/galerie/thumbs/transport-32.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 33"><img src="../img/galerie/thumbs/transport-33.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 34"><img src="../img/galerie/thumbs/transport-34.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 35"><img src="../img/galerie/thumbs/transport-35.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 36"><img src="../img/galerie/thumbs/transport-36.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 37"><img src="../img/galerie/thumbs/transport-37.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 38"><img src="../img/galerie/thumbs/transport-38.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Mostra immagine 39"><img src="../img/galerie/thumbs/transport-39.jpg" alt="" width="240" height="180" loading="lazy"></button>
+      </div>
     </div>
   </div>
 </section>

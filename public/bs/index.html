@@ -184,20 +184,107 @@
 </section>
 
 <!-- ================= GALERIE =================
-     Bilder in img/galerie-1.jpg bis galerie-6.jpg ersetzen -->
+     Slideshow. Bilder liegen in img/galerie/ (gross) und img/galerie/thumbs/ (Vorschau 240 x 180).
+     Neues Bild: Datei in beide Ordner legen und je eine Zeile bei "slides" und "ss-thumbs" kopieren. -->
 <section class="section" id="galerie">
   <div class="container">
     <header class="section-head">
       <p class="eyebrow">Galerija</p>
       <h2>Pogled na moje <span class="script">prijevoze</span></h2>
     </header>
-    <div class="gallery">
-      <a href="../img/galerie-1.jpg"><img src="../img/galerie-1.jpg" alt="Prijevoz automobila prikolicom" loading="lazy" width="1200" height="900"></a>
-      <a href="../img/galerie-2.jpg"><img src="../img/galerie-2.jpg" alt="Sigurno pričvršćeno vozilo" loading="lazy" width="1200" height="900"></a>
-      <a href="../img/galerie-3.jpg"><img src="../img/galerie-3.jpg" alt="Prijevoz vozila" loading="lazy" width="1200" height="900"></a>
-      <a href="../img/galerie-4.jpg"><img src="../img/galerie-4.jpg" alt="Preuzimanje kod prodavača" loading="lazy" width="1200" height="900"></a>
-      <a href="../img/galerie-5.jpg"><img src="../img/galerie-5.jpg" alt="Prijevoz u Europi" loading="lazy" width="1200" height="900"></a>
-      <a href="../img/galerie-6.jpg"><img src="../img/galerie-6.jpg" alt="Predaja kupcu" loading="lazy" width="1200" height="900"></a>
+    <div class="slideshow" aria-roledescription="Slideshow" aria-label="Galerija fotografija prijevoza" data-interval="5000">
+      <div class="ss-stage">
+        <div class="ss-backdrop" aria-hidden="true"></div>
+        <div class="slides" aria-live="off">
+          <figure class="slide is-active" role="group" aria-roledescription="Slika" aria-label="1 od 39"><a href="../img/galerie/transport-01.jpg"><img src="../img/galerie/transport-01.jpg" alt="Dva vozila na troosovinskoj auto prikolici" width="1280" height="960" loading="eager" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="2 od 39"><a href="../img/galerie/transport-02.jpg"><img src="../img/galerie/transport-02.jpg" alt="Dva BMW-a serije 3 na putu, pauza kraj jezera" width="1280" height="960" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="3 od 39"><a href="../img/galerie/transport-03.jpg"><img src="../img/galerie/transport-03.jpg" alt="Dvostruki prijevoz s dvije BMW limuzine" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="4 od 39"><a href="../img/galerie/transport-04.jpg"><img src="../img/galerie/transport-04.jpg" alt="BMW serije 3 sigurno pričvršćen na prikolici" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="5 od 39"><a href="../img/galerie/transport-05.jpg"><img src="../img/galerie/transport-05.jpg" alt="Pojedinačni prijevoz na tandem prikolici" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="6 od 39"><a href="../img/galerie/transport-06.jpg"><img src="../img/galerie/transport-06.jpg" alt="Utovar vitlom ispred garaže" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="7 od 39"><a href="../img/galerie/transport-07.jpg"><img src="../img/galerie/transport-07.jpg" alt="Mercedes SUV se povlači na prikolicu" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="8 od 39"><a href="../img/galerie/transport-08.jpg"><img src="../img/galerie/transport-08.jpg" alt="Mercedes A-klase pri preuzimanju u radionici" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="9 od 39"><a href="../img/galerie/transport-09.jpg"><img src="../img/galerie/transport-09.jpg" alt="Prijevoz Mercedesa A-klase" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="10 od 39"><a href="../img/galerie/transport-10.jpg"><img src="../img/galerie/transport-10.jpg" alt="Vozilo s prikolicom u zalazak sunca na putu do preuzimanja" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="11 od 39"><a href="../img/galerie/transport-11.jpg"><img src="../img/galerie/transport-11.jpg" alt="Porsche Cayenne na auto prikolici" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="12 od 39"><a href="../img/galerie/transport-12.jpg"><img src="../img/galerie/transport-12.jpg" alt="Porsche Cayenne spreman za prijevoz" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="13 od 39"><a href="../img/galerie/transport-13.jpg"><img src="../img/galerie/transport-13.jpg" alt="Dva Fiata 500 na troosovinskoj prikolici" width="1158" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="14 od 39"><a href="../img/galerie/transport-14.jpg"><img src="../img/galerie/transport-14.jpg" alt="Noćna vožnja s osvijetljenom auto prikolicom" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="15 od 39"><a href="../img/galerie/transport-15.jpg"><img src="../img/galerie/transport-15.jpg" alt="Na putu i zimi po snijegu" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="16 od 39"><a href="../img/galerie/transport-16.jpg"><img src="../img/galerie/transport-16.jpg" alt="Spuštena prikolica, spremna za utovar" width="1280" height="960" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="17 od 39"><a href="../img/galerie/transport-17.jpg"><img src="../img/galerie/transport-17.jpg" alt="BMW serije 3 pri preuzimanju kod prodavača" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="18 od 39"><a href="../img/galerie/transport-18.jpg"><img src="../img/galerie/transport-18.jpg" alt="Dvostruki prijevoz u noći" width="1280" height="960" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="19 od 39"><a href="../img/galerie/transport-19.jpg"><img src="../img/galerie/transport-19.jpg" alt="Porsche Cayenne pri predaji" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="20 od 39"><a href="../img/galerie/transport-20.jpg"><img src="../img/galerie/transport-20.jpg" alt="Audi Q7 na auto prikolici" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="21 od 39"><a href="../img/galerie/transport-21.jpg"><img src="../img/galerie/transport-21.jpg" alt="Kombi na prikolici, noćna vožnja" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="22 od 39"><a href="../img/galerie/transport-22.jpg"><img src="../img/galerie/transport-22.jpg" alt="Na putu noću dok pada snijeg" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="23 od 39"><a href="../img/galerie/transport-23.jpg"><img src="../img/galerie/transport-23.jpg" alt="Dva mala auta sigurno pričvršćena u snijegu" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="24 od 39"><a href="../img/galerie/transport-24.jpg"><img src="../img/galerie/transport-24.jpg" alt="Prijevoz kombija u autosalonu" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="25 od 39"><a href="../img/galerie/transport-25.jpg"><img src="../img/galerie/transport-25.jpg" alt="Mercedes Vito na auto prikolici" width="988" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="26 od 39"><a href="../img/galerie/transport-26.jpg"><img src="../img/galerie/transport-26.jpg" alt="Dva kombija na vožnji kroz Alpe" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="27 od 39"><a href="../img/galerie/transport-27.jpg"><img src="../img/galerie/transport-27.jpg" alt="Dvostruki prijevoz noću" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="28 od 39"><a href="../img/galerie/transport-28.jpg"><img src="../img/galerie/transport-28.jpg" alt="Prijevoz kontejnera troosovinskom prikolicom" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="29 od 39"><a href="../img/galerie/transport-29.jpg"><img src="../img/galerie/transport-29.jpg" alt="Kontejner od 20 stopa sigurno učvršćen" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="30 od 39"><a href="../img/galerie/transport-30.jpg"><img src="../img/galerie/transport-30.jpg" alt="Preuzimanje Audija RS6 u autosalonu" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="31 od 39"><a href="../img/galerie/transport-31.jpg"><img src="../img/galerie/transport-31.jpg" alt="Dvostruki prijevoz BMW-a i Hyundaija po suncu" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="32 od 39"><a href="../img/galerie/transport-32.jpg"><img src="../img/galerie/transport-32.jpg" alt="Audi RS6 pri preuzimanju kod prodavača" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="33 od 39"><a href="../img/galerie/transport-33.jpg"><img src="../img/galerie/transport-33.jpg" alt="BMW X6 sigurno na auto prikolici" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="34 od 39"><a href="../img/galerie/transport-34.jpg"><img src="../img/galerie/transport-34.jpg" alt="Dvije prikolice s po dva auta na točenju goriva" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="35 od 39"><a href="../img/galerie/transport-35.jpg"><img src="../img/galerie/transport-35.jpg" alt="Prijevoz više traktorskih kosilica" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="36 od 39"><a href="../img/galerie/transport-36.jpg"><img src="../img/galerie/transport-36.jpg" alt="Porsche Cayenne se pričvršćuje" width="724" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="37 od 39"><a href="../img/galerie/transport-37.jpg"><img src="../img/galerie/transport-37.jpg" alt="Porsche Panamera noću na putu" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="38 od 39"><a href="../img/galerie/transport-38.jpg"><img src="../img/galerie/transport-38.jpg" alt="Porsche Panamera na troosovinskoj prikolici" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Slika" aria-label="39 od 39"><a href="../img/galerie/transport-39.jpg"><img src="../img/galerie/transport-39.jpg" alt="Porsche Cayenne na putu do kupca" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+        </div>
+        <button type="button" class="ss-btn ss-prev" aria-label="Prethodna slika"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button type="button" class="ss-btn ss-next" aria-label="Sljedeća slika"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        <div class="ss-bar">
+          <button type="button" class="ss-play" aria-label="Pauziraj prezentaciju"><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5l12 7-12 7z"/></svg></button>
+          <span class="ss-counter"><b>1</b> / 39</span>
+        </div>
+        <div class="ss-progress" aria-hidden="true"><span></span></div>
+      </div>
+      <div class="ss-thumbs">
+        <button type="button" class="ss-thumb" aria-current="true" aria-label="Prikaži sliku 1"><img src="../img/galerie/thumbs/transport-01.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 2"><img src="../img/galerie/thumbs/transport-02.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 3"><img src="../img/galerie/thumbs/transport-03.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 4"><img src="../img/galerie/thumbs/transport-04.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 5"><img src="../img/galerie/thumbs/transport-05.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 6"><img src="../img/galerie/thumbs/transport-06.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 7"><img src="../img/galerie/thumbs/transport-07.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 8"><img src="../img/galerie/thumbs/transport-08.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 9"><img src="../img/galerie/thumbs/transport-09.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 10"><img src="../img/galerie/thumbs/transport-10.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 11"><img src="../img/galerie/thumbs/transport-11.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 12"><img src="../img/galerie/thumbs/transport-12.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 13"><img src="../img/galerie/thumbs/transport-13.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 14"><img src="../img/galerie/thumbs/transport-14.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 15"><img src="../img/galerie/thumbs/transport-15.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 16"><img src="../img/galerie/thumbs/transport-16.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 17"><img src="../img/galerie/thumbs/transport-17.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 18"><img src="../img/galerie/thumbs/transport-18.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 19"><img src="../img/galerie/thumbs/transport-19.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 20"><img src="../img/galerie/thumbs/transport-20.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 21"><img src="../img/galerie/thumbs/transport-21.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 22"><img src="../img/galerie/thumbs/transport-22.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 23"><img src="../img/galerie/thumbs/transport-23.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 24"><img src="../img/galerie/thumbs/transport-24.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 25"><img src="../img/galerie/thumbs/transport-25.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 26"><img src="../img/galerie/thumbs/transport-26.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 27"><img src="../img/galerie/thumbs/transport-27.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 28"><img src="../img/galerie/thumbs/transport-28.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 29"><img src="../img/galerie/thumbs/transport-29.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 30"><img src="../img/galerie/thumbs/transport-30.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 31"><img src="../img/galerie/thumbs/transport-31.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 32"><img src="../img/galerie/thumbs/transport-32.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 33"><img src="../img/galerie/thumbs/transport-33.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 34"><img src="../img/galerie/thumbs/transport-34.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 35"><img src="../img/galerie/thumbs/transport-35.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 36"><img src="../img/galerie/thumbs/transport-36.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 37"><img src="../img/galerie/thumbs/transport-37.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 38"><img src="../img/galerie/thumbs/transport-38.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Prikaži sliku 39"><img src="../img/galerie/thumbs/transport-39.jpg" alt="" width="240" height="180" loading="lazy"></button>
+      </div>
     </div>
   </div>
 </section>
