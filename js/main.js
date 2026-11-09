@@ -19,7 +19,7 @@ if (toggle && nav) {
 }
 
 // Einblend-Animation
-const revealEls = document.querySelectorAll('.section-head, .card, .steps li, .gallery a, .about > *, .contact > *');
+const revealEls = document.querySelectorAll('.section-head, .tile, .steps li, .gallery a, .about > *, .contact > *');
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver(entries => entries.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
@@ -62,3 +62,9 @@ if (form) {
 // Jahr im Footer
 const y = document.getElementById('year');
 if (y) y.textContent = new Date().getFullYear();
+
+// Kachel-Buttons wählen die passende Transportart im Formular vor
+document.querySelectorAll('[data-art]').forEach(a => a.addEventListener('click', () => {
+  const sel = document.querySelector('select[name=art]');
+  if (sel) sel.value = a.dataset.art;
+}));

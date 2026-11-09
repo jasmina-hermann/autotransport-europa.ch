@@ -32,7 +32,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 body { margin: 0; background: linear-gradient(180deg, #96805f 0%, var(--bg) 18%, #8f7758 38%, var(--bg-alt) 58%, #6b573e 78%, var(--bg-deep) 100%) var(--bg); color: var(--text); font-family: var(--font); font-size: 17px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; }
-h1, h2, h3, h4 { line-height: 1.15; margin: 0 0 .6em; font-weight: 800; }
+h1, h2, h3, h4 { overflow-wrap: break-word; line-height: 1.15; margin: 0 0 .6em; font-weight: 800; }
 h1 { font-size: clamp(2.4rem, 5.6vw, 4.4rem); }
 h2 { font-size: clamp(1.8rem, 3.8vw, 2.8rem); }
 h3 { font-size: 1.35rem; font-weight: 700; }
@@ -41,7 +41,7 @@ p { margin: 0 0 1em; }
 
 /* Schreibschrift für Highlight-Wörter */
 .script {
-  font-family: var(--script); font-weight: 400; font-size: 1.45em; line-height: .8;
+  font-family: var(--script); font-weight: 400; font-size: 1.6em; line-height: .75;
   letter-spacing: 0; text-transform: none; padding: 0 .08em;
   background: linear-gradient(90deg, #a9d3ef, var(--accent-light) 50%, #ffffff);
   -webkit-background-clip: text; background-clip: text; color: transparent;
@@ -93,22 +93,21 @@ p { margin: 0 0 1em; }
 .section-head p:last-child:not(.eyebrow) { color: var(--muted); }
 
 /* Leistungen */
-.services { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
-.service { background: var(--surface); backdrop-filter: blur(4px); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; transition: transform .3s, box-shadow .3s, border-color .3s; }
-.service:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent), 0 18px 40px rgba(0,0,0,.25), 0 0 26px rgba(108,166,205,.35); }
-.service img { aspect-ratio: 3/2; object-fit: cover; width: 100%; }
-.service-body { padding: 32px; }
-.service-body p { color: var(--muted); }
-.badge { display: inline-block; font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--accent-text); border: 1px solid var(--accent); border-radius: 30px; padding: 4px 12px; margin-bottom: 14px; box-shadow: 0 0 10px rgba(108,166,205,.35); }
-.checks { list-style: none; padding: 0; margin: 18px 0 0; }
-.checks li { position: relative; padding-left: 30px; margin-bottom: 8px; }
-.checks li::before { content: ""; position: absolute; left: 0; top: .45em; width: 16px; height: 9px; border-left: 2.5px solid var(--accent-light); border-bottom: 2.5px solid var(--accent-light); transform: rotate(-45deg); }
+/* Kacheln (Leistungen) */
+.tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.tile { display: flex; flex-direction: column; padding: 32px; background: rgba(40,30,20,.32); border: 1px solid var(--line); border-radius: 14px; backdrop-filter: blur(4px); transition: transform .3s, border-color .3s, box-shadow .3s; }
+.tile:hover { transform: translateY(-4px); border-color: rgba(108,166,205,.5); box-shadow: 0 18px 40px rgba(0,0,0,.25), 0 0 24px rgba(108,166,205,.18); }
+.tile h3 { margin: 22px 0 12px; font-size: 1.35rem; }
+.tile p { color: var(--muted); margin: 0 0 28px; flex: 1; }
+.tile-icon { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 10px; background: #2b2117; color: var(--accent-light); box-shadow: inset 0 0 0 1px rgba(246,239,228,.06); }
+.tile-icon svg { width: 28px; height: 28px; filter: drop-shadow(0 0 6px rgba(108,166,205,.6)); }
+.btn-block { display: block; width: 100%; padding: 14px 20px; }
 
 /* Ablauf */
 .steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-.steps li { padding: 30px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); position: relative; }
-.steps li::before { content: ""; position: absolute; top: -1px; left: 24px; right: 24px; height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent-light)); border-radius: 3px; box-shadow: 0 0 10px var(--glow); }
-.step-no { display: block; font-size: 2.4rem; font-weight: 800; color: var(--accent-light); margin-bottom: 10px; }
+.steps li { padding: 30px; background: rgba(40,30,20,.32); border: 1px solid var(--line); border-radius: 14px; }
+.steps h3 { margin: 22px 0 10px; }
+.step-no { font-size: 1.3rem; font-weight: 800; text-shadow: 0 0 8px rgba(108,166,205,.6); }
 .steps p { color: var(--muted); margin: 0; }
 
 /* Galerie */
@@ -128,7 +127,7 @@ p { margin: 0 0 1em; }
 .about { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
 .about img { border-radius: 16px; aspect-ratio: 4/3; object-fit: cover; width: 100%; }
 .about p { color: var(--muted); }
-.signature { font-family: var(--script); font-size: 2.1rem; line-height: 1.2; color: var(--accent-light) !important; margin-top: .8em; }
+.signature { font-family: var(--script); font-size: 2.4rem; line-height: 1.2; color: var(--accent-light) !important; margin-top: .8em; }
 
 /* Kontakt */
 .contact { display: grid; grid-template-columns: 1fr 1.3fr; gap: 60px; }
@@ -170,8 +169,8 @@ p { margin: 0 0 1em; }
 /* ===== Responsive ===== */
 @media (max-width: 960px) {
   .hero { padding-top: 120px; }
-  .hero-grid, .services, .about, .contact { grid-template-columns: 1fr; gap: 40px; }
-  .gallery, .steps, .usp-grid, .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-grid, .about, .contact { grid-template-columns: 1fr; gap: 40px; }
+  .tiles, .gallery, .steps, .usp-grid, .footer-grid { grid-template-columns: repeat(2, 1fr); }
   .nav-toggle { display: block; }
   .main-nav { position: fixed; inset: 76px 0 auto; flex-direction: column; gap: 0; background: var(--bg); padding: 10px 20px 24px; box-shadow: 0 20px 30px rgba(0,0,0,.2); transform: translateY(-120%); transition: transform .3s; visibility: hidden; }
   .main-nav.open { transform: none; visibility: visible; }
@@ -184,7 +183,10 @@ p { margin: 0 0 1em; }
 @media (max-width: 600px) {
   body { font-size: 16px; }
   .section { padding: 75px 0; }
-  .gallery, .steps, .form-row, .footer-grid { grid-template-columns: 1fr; }
-  .contact-form, .service-body { padding: 24px; }
+  .tiles, .gallery, .steps, .form-row, .footer-grid { grid-template-columns: 1fr; }
+  .contact-form, .tile { padding: 24px; }
   .hero-actions .btn { width: 100%; }
 }
+
+.about > *, .contact > *, .hero-grid > * { min-width: 0; }
+.script { white-space: nowrap; hyphens: none; }
