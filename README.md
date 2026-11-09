@@ -21,7 +21,7 @@ robots.txt, sitemap.xml, .htaccess   SEO und Weiterleitungen
 - Alle Stellen mit `[PLATZHALTER]` in `index.html`, `impressum.html` und `kontakt.php` ersetzen.
 - Bilder im Ordner `img/` mit **gleichem Dateinamen** überschreiben. Empfohlene Grössen stehen auf den Platzhalterbildern. Fotos vorher komprimieren (z. B. squoosh.app, unter 300 KB pro Bild).
 - Bild-Beschreibungen (`alt="..."`) sinnvoll ausfüllen, das hilft bei Google.
-- Farben ändern: `--accent` usw. ganz oben in `css/style.css` (Braun #8B5A2B, Babyblau #6CA6CD, Off-White #F6EFE4).
+- Farben ändern: `--accent` usw. ganz oben in `css/style.css` (Braun #8B7355 (burlywood4) mit Verlauf, Babyblau #6CA6CD, Off-White #F6EFE4).
 - Schreibschrift für Highlight-Wörter: Wort in `<span class="script">…</span>` setzen. Schriften liegen lokal in `fonts/` (Outfit + Mrs Saint Delafield, beide frei unter OFL), kein Google-Fonts-Aufruf nötig.
 
 ## Veröffentlichen auf Hostpoint (automatisch via GitHub)
