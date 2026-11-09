@@ -18,6 +18,16 @@ robots.txt, sitemap.xml   SEO
 _headers            Caching-Regeln für Cloudflare
 ```
 
+## Sprachen
+
+Deutsch ist `public/index.html`. Englisch (`public/en/`), Italienisch (`public/it/`) und Bosnisch/Kroatisch (`public/bs/`) werden daraus erzeugt:
+
+```
+python3 tools/build_i18n.py
+```
+
+Wer einen deutschen Text ändert, muss die Übersetzung in `tools/build_i18n.py` (Liste `TEXTS`) anpassen und das Skript erneut ausführen. Das Skript meldet Texte, die es nicht mehr findet. AGB, Impressum und Datenschutz gibt es nur auf Deutsch.
+
 ## Texte und Bilder ersetzen
 
 - Galerie (Slideshow): Fotos liegen in `img/galerie/` (max. 1280 px, unter ca. 350 KB) und als Vorschau in `img/galerie/thumbs/` (240 × 180 px). Neues Foto: in beide Ordner legen und in `index.html` je eine Zeile bei `slides` und `ss-thumbs` kopieren.
