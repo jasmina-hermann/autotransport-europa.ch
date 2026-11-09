@@ -4,6 +4,8 @@ Onepage-Webseite (plus Seite für Impressum & Datenschutz). Reines HTML/CSS/JS, 
 
 ## Struktur
 
+Alle Dateien der Webseite liegen im Ordner `public/`.
+
 ```
 index.html          Startseite (Hero, Leistungen: Anhänger bis 3,5 t + Überführung, Ablauf, Galerie, Kontakt)
 impressum.html      Impressum & Datenschutz
@@ -24,16 +26,15 @@ _headers            Caching-Regeln für Cloudflare
 - Farben ändern: `--accent` usw. ganz oben in `css/style.css` (Braun #8B7355 (burlywood4) mit Verlauf, Babyblau #6CA6CD, Off-White #F6EFE4).
 - Schreibschrift für Highlight-Wörter: Wort in `<span class="script">…</span>` setzen. Schriften liegen lokal in `fonts/` (Outfit + Allura, beide frei unter OFL), kein Google-Fonts-Aufruf nötig.
 
-## Veröffentlichen mit Cloudflare Pages
+## Veröffentlichen mit Cloudflare (Workers)
 
-1. Cloudflare Dashboard → **Workers & Pages** → **Create** → Tab **Pages** → **Connect to Git** → Repo `autotransport-europa.ch` wählen.
-2. Einstellungen: Framework preset **None**, Build command **leer lassen**, Build output directory **`/`**. → **Save and Deploy**. Die Seite ist danach unter `*.pages.dev` erreichbar.
-3. Domain zu Cloudflare: **Add a domain** → `autotransport-europa.ch` → Free-Plan. Cloudflare zeigt zwei Nameserver.
-4. Bei Hostpoint (Control Panel → Domains → autotransport-europa.ch → **Nameserver**) die beiden Cloudflare-Nameserver eintragen. Dauert bis zu 24 h.
-5. Im Pages-Projekt → **Custom domains** → `www.autotransport-europa.ch` und `autotransport-europa.ch` hinzufügen. SSL macht Cloudflare automatisch.
-6. Optional: Unter **Rules → Redirect Rules** `autotransport-europa.ch` → `https://www.autotransport-europa.ch` (301) weiterleiten.
+1. Cloudflare Dashboard → **Workers & Pages** → **Create** → **Import a repository** → `autotransport-europa.ch` wählen.
+2. Build-Befehl leer lassen, Bereitstellungsbefehl `npx wrangler deploy` (Standard). Die Einstellungen stehen in `wrangler.jsonc` (Ordner `public/`). → **Bereitstellen**. Danach ist die Seite unter `*.workers.dev` erreichbar.
+3. Domain zu Cloudflare: **Add a domain** → `autotransport-europa.ch` → Free-Plan. Bei Hostpoint (Domains → Nameserver) die zwei Cloudflare-Nameserver eintragen (bis 24 h).
+4. Im Worker → **Settings → Domains & Routes** → **Custom domain**: `www.autotransport-europa.ch` und `autotransport-europa.ch` hinzufügen.
+5. Optional: **Rules → Redirect Rules** `autotransport-europa.ch` → `https://www.autotransport-europa.ch` (301).
 
-Ab dann wird jede Änderung auf `main` automatisch veröffentlicht.
+Jede Änderung auf `main` wird automatisch veröffentlicht.
 
 ## Sichtbar auf Google
 
