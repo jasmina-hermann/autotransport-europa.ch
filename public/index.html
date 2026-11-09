@@ -172,20 +172,69 @@
 </section>
 
 <!-- ================= GALERIE =================
-     Bilder in img/galerie-1.jpg bis galerie-6.jpg ersetzen -->
+     Slideshow. Bilder liegen in img/galerie/ (gross) und img/galerie/thumbs/ (Vorschau 240 x 180).
+     Neues Bild: Datei in beide Ordner legen und je eine Zeile bei "slides" und "ss-thumbs" kopieren. -->
 <section class="section" id="galerie">
   <div class="container">
     <header class="section-head">
       <p class="eyebrow">Galerie</p>
       <h2>Einblicke in meine <span class="script">Transporte</span></h2>
     </header>
-    <div class="gallery">
-      <a href="img/galerie-1.jpg"><img src="img/galerie-1.jpg" alt="Autotransport mit Anhänger" loading="lazy" width="1200" height="900"></a>
-      <a href="img/galerie-2.jpg"><img src="img/galerie-2.jpg" alt="Fahrzeug sicher verzurrt" loading="lazy" width="1200" height="900"></a>
-      <a href="img/galerie-3.jpg"><img src="img/galerie-3.jpg" alt="Fahrzeugüberführung" loading="lazy" width="1200" height="900"></a>
-      <a href="img/galerie-4.jpg"><img src="img/galerie-4.jpg" alt="Abholung beim Händler" loading="lazy" width="1200" height="900"></a>
-      <a href="img/galerie-5.jpg"><img src="img/galerie-5.jpg" alt="Transport in Europa" loading="lazy" width="1200" height="900"></a>
-      <a href="img/galerie-6.jpg"><img src="img/galerie-6.jpg" alt="Übergabe beim Kunden" loading="lazy" width="1200" height="900"></a>
+    <div class="slideshow" aria-roledescription="Slideshow" aria-label="Fotogalerie Autotransporte" data-interval="5000">
+      <div class="ss-stage">
+        <div class="ss-backdrop" aria-hidden="true"></div>
+        <div class="slides" aria-live="off">
+          <figure class="slide is-active" role="group" aria-roledescription="Bild" aria-label="1 von 20"><a href="img/galerie/transport-01.jpg"><img src="img/galerie/transport-01.jpg" alt="Zwei Fahrzeuge auf dem Dreiachs-Autoanhänger" width="1280" height="960" loading="eager" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Bild" aria-label="2 von 20"><a href="img/galerie/transport-02.jpg"><img src="img/galerie/transport-02.jpg" alt="Zwei BMW 3er unterwegs, Pause am See" width="1280" height="960" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Bild" aria-label="3 von 20"><a href="img/galerie/transport-03.jpg"><img src="img/galerie/transport-03.jpg" alt="Doppeltransport mit zwei BMW Limousinen" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Bild" aria-label="4 von 20"><a href="img/galerie/transport-04.jpg"><img src="img/galerie/transport-04.jpg" alt="BMW 3er sicher verzurrt auf dem Anhänger" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Bild" aria-label="5 von 20"><a href="img/galerie/transport-05.jpg"><img src="img/galerie/transport-05.jpg" alt="Einzeltransport auf dem Tandem-Anhänger" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Bild" aria-label="6 von 20"><a href="img/galerie/transport-06.jpg"><img src="img/galerie/transport-06.jpg" alt="Verladen mit der Seilwinde direkt vor der Garage" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Bild" aria-label="7 von 20"><a href="img/galerie/transport-07.jpg"><img src="img/galerie/transport-07.jpg" alt="Mercedes SUV wird auf den Anhänger gezogen" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Bild" aria-label="8 von 20"><a href="img/galerie/transport-08.jpg"><img src="img/galerie/transport-08.jpg" alt="Mercedes A-Klasse bei der Abholung in der Werkstatt" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Bild" aria-label="9 von 20"><a href="img/galerie/transport-09.jpg"><img src="img/galerie/transport-09.jpg" alt="Fahrzeugtransport mit Mercedes A-Klasse" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Bild" aria-label="10 von 20"><a href="img/galerie/transport-10.jpg"><img src="img/galerie/transport-10.jpg" alt="Gespann bei Sonnenuntergang auf dem Weg zur Abholung" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Bild" aria-label="11 von 20"><a href="img/galerie/transport-11.jpg"><img src="img/galerie/transport-11.jpg" alt="Porsche Cayenne auf dem Autoanhänger" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Bild" aria-label="12 von 20"><a href="img/galerie/transport-12.jpg"><img src="img/galerie/transport-12.jpg" alt="Porsche Cayenne bereit für die Überführung" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Bild" aria-label="13 von 20"><a href="img/galerie/transport-13.jpg"><img src="img/galerie/transport-13.jpg" alt="Zwei Fiat 500 auf dem Dreiachs-Anhänger" width="1158" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Bild" aria-label="14 von 20"><a href="img/galerie/transport-14.jpg"><img src="img/galerie/transport-14.jpg" alt="Nachtfahrt mit beleuchtetem Autoanhänger" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Bild" aria-label="15 von 20"><a href="img/galerie/transport-15.jpg"><img src="img/galerie/transport-15.jpg" alt="Unterwegs auch im Winter bei Schnee" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Bild" aria-label="16 von 20"><a href="img/galerie/transport-16.jpg"><img src="img/galerie/transport-16.jpg" alt="Anhänger abgesenkt, bereit zum Verladen" width="1280" height="960" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Bild" aria-label="17 von 20"><a href="img/galerie/transport-17.jpg"><img src="img/galerie/transport-17.jpg" alt="BMW 3er bei der Abholung beim Autohändler" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Bild" aria-label="18 von 20"><a href="img/galerie/transport-18.jpg"><img src="img/galerie/transport-18.jpg" alt="Doppeltransport in der Nacht" width="1280" height="960" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Bild" aria-label="19 von 20"><a href="img/galerie/transport-19.jpg"><img src="img/galerie/transport-19.jpg" alt="Porsche Cayenne bei der Übergabe" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+          <figure class="slide" role="group" aria-roledescription="Bild" aria-label="20 von 20"><a href="img/galerie/transport-20.jpg"><img src="img/galerie/transport-20.jpg" alt="Audi Q7 auf dem Autoanhänger" width="960" height="1280" loading="lazy" decoding="async"></a></figure>
+        </div>
+        <button type="button" class="ss-btn ss-prev" aria-label="Vorheriges Bild"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button type="button" class="ss-btn ss-next" aria-label="Nächstes Bild"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        <div class="ss-bar">
+          <button type="button" class="ss-play" aria-label="Slideshow pausieren"><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5l12 7-12 7z"/></svg></button>
+          <span class="ss-counter"><b>1</b> / 20</span>
+        </div>
+        <div class="ss-progress" aria-hidden="true"><span></span></div>
+      </div>
+      <div class="ss-thumbs">
+        <button type="button" class="ss-thumb" aria-current="true" aria-label="Bild 1 anzeigen"><img src="img/galerie/thumbs/transport-01.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Bild 2 anzeigen"><img src="img/galerie/thumbs/transport-02.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Bild 3 anzeigen"><img src="img/galerie/thumbs/transport-03.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Bild 4 anzeigen"><img src="img/galerie/thumbs/transport-04.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Bild 5 anzeigen"><img src="img/galerie/thumbs/transport-05.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Bild 6 anzeigen"><img src="img/galerie/thumbs/transport-06.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Bild 7 anzeigen"><img src="img/galerie/thumbs/transport-07.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Bild 8 anzeigen"><img src="img/galerie/thumbs/transport-08.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Bild 9 anzeigen"><img src="img/galerie/thumbs/transport-09.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Bild 10 anzeigen"><img src="img/galerie/thumbs/transport-10.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Bild 11 anzeigen"><img src="img/galerie/thumbs/transport-11.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Bild 12 anzeigen"><img src="img/galerie/thumbs/transport-12.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Bild 13 anzeigen"><img src="img/galerie/thumbs/transport-13.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Bild 14 anzeigen"><img src="img/galerie/thumbs/transport-14.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Bild 15 anzeigen"><img src="img/galerie/thumbs/transport-15.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Bild 16 anzeigen"><img src="img/galerie/thumbs/transport-16.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Bild 17 anzeigen"><img src="img/galerie/thumbs/transport-17.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Bild 18 anzeigen"><img src="img/galerie/thumbs/transport-18.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Bild 19 anzeigen"><img src="img/galerie/thumbs/transport-19.jpg" alt="" width="240" height="180" loading="lazy"></button>
+        <button type="button" class="ss-thumb" aria-label="Bild 20 anzeigen"><img src="img/galerie/thumbs/transport-20.jpg" alt="" width="240" height="180" loading="lazy"></button>
+      </div>
     </div>
   </div>
 </section>

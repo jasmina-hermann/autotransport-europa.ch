@@ -20,7 +20,7 @@ _headers            Caching-Regeln für Cloudflare
 
 ## Texte und Bilder ersetzen
 
-- Galerie-Fotos: `img/galerie-1.jpg` bis `galerie-6.jpg` (1200 × 900 px) mit eigenen Fotos überschreiben.
+- Galerie (Slideshow): Fotos liegen in `img/galerie/` (max. 1280 px, unter ca. 350 KB) und als Vorschau in `img/galerie/thumbs/` (240 × 180 px). Neues Foto: in beide Ordner legen und in `index.html` je eine Zeile bei `slides` und `ss-thumbs` kopieren.
 - Bilder im Ordner `img/` mit **gleichem Dateinamen** überschreiben. Empfohlene Grössen stehen auf den Platzhalterbildern. Fotos vorher komprimieren (z. B. squoosh.app, unter 300 KB pro Bild).
 - Bild-Beschreibungen (`alt="..."`) sinnvoll ausfüllen, das hilft bei Google.
 - Farben ändern: `--accent` usw. ganz oben in `css/style.css` (Braun #8B7355 (burlywood4) mit Verlauf, Babyblau #6CA6CD, Off-White #F6EFE4).
