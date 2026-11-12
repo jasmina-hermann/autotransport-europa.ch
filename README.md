@@ -8,8 +8,8 @@ Alle Dateien der Webseite liegen im Ordner `public/`.
 
 ```
 index.html          Startseite (Hero, Leistungen: Anhänger bis 3,5 t + Überführung, Ablauf, Galerie, Kontakt)
-impressum.html      Impressum & Datenschutz
-agb.html            AGB (Transport, Vorauszahlung, Verladung)
+impressum.html      Impressum & Datenschutz (Adresse /impressum)
+agb.html            AGB (Adresse /agb) (Transport, Vorauszahlung, Verladung)
 css/style.css       Design (Farben ganz oben unter :root)
 js/main.js          Menü, Galerie-Lightbox, Animationen
 fonts/              Schriften (lokal, datenschutzfreundlich)
@@ -42,7 +42,7 @@ Wer einen deutschen Text ändert, muss die Übersetzung in `tools/build_i18n.py`
 2. Build-Befehl leer lassen, Bereitstellungsbefehl `npx wrangler deploy` (Standard). Die Einstellungen stehen in `wrangler.jsonc` (Ordner `public/`). → **Bereitstellen**. Danach ist die Seite unter `*.workers.dev` erreichbar.
 3. Domain zu Cloudflare: **Add a domain** → `autotransport-europa.ch` → Free-Plan. Bei Hostpoint (Domains → Nameserver) die zwei Cloudflare-Nameserver eintragen (bis 24 h).
 4. Im Worker → **Settings → Domains & Routes** → **Custom domain**: `www.autotransport-europa.ch` und `autotransport-europa.ch` hinzufügen.
-5. Optional: **Rules → Redirect Rules** `autotransport-europa.ch` → `https://www.autotransport-europa.ch` (301).
+5. Weiterleitungen macht `src/worker.js` selbst: `http://`, `autotransport-europa.ch` (ohne www) und `*.workers.dev` gehen per 301 auf `https://www.autotransport-europa.ch`, `index.html` auf `/` und `agb.html`/`impressum.html` auf `/agb` bzw. `/impressum`. So sieht Google nur eine Adresse pro Seite.
 
 Jede Änderung auf `main` wird automatisch veröffentlicht.
 

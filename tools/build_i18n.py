@@ -52,6 +52,9 @@ TEXTS = [
      'aria-label="Autotransport Europa &amp; Schweiz, na početnu stranicu"'),
     ('aria-label="Hauptnavigation"', 'aria-label="Main navigation"', 'aria-label="Navigazione principale"', 'aria-label="Glavna navigacija"'),
     ('aria-label="Menü öffnen"', 'aria-label="Open menu"', 'aria-label="Apri menu"', 'aria-label="Otvori izbornik"'),
+    ('aria-label="Weitere Sprachen"', 'aria-label="Other languages"', 'aria-label="Altre lingue"', 'aria-label="Drugi jezici"'),
+    ("<p>Diese Seite gibt es auch auf:</p>", "<p>This page is also available in:</p>",
+     "<p>Questa pagina è disponibile anche in:</p>", "<p>Ova stranica postoji i na:</p>"),
     ('aria-label="Sprache"', 'aria-label="Language"', 'aria-label="Lingua"', 'aria-label="Jezik"'),
     ('alt="Geländewagen zieht einen Autoanhänger mit zwei Limousinen"',
      'alt="SUV towing a car trailer carrying two saloon cars"',
@@ -264,7 +267,11 @@ def build(lang, idx):
     html = re.sub(rf'(<a href="/{lang}/" hreflang="{lang}" lang="{lang}")>', r'\1 aria-current="page">', html)
     # relative Pfade eine Ebene höher
     html = re.sub(r'(href|src)="(css|js|img|fonts)/', r'\1="../\2/', html)
-    html = re.sub(r'href="(agb|impressum)\.html', r'href="../\1.html', html)
+
+    # Sprach-Hinweis: Deutsch ergänzen, eigene Sprache weglassen
+    de_link = '<a href="/" hreflang="de" lang="de" data-l="de"><img src="/img/flags/ch.svg" alt="" width="24" height="16"><img src="/img/flags/de.svg" alt="" width="24" height="16">Deutsch</a>'
+    html = html.replace('<a href="/en/" hreflang="en" lang="en" data-l="en">', de_link + '\n        <a href="/en/" hreflang="en" lang="en" data-l="en">', 1)
+    html = re.sub(rf'\n\s*<a href="/{lang}/" hreflang="{lang}" lang="{lang}" data-l="{lang}">.*?</a>', '', html, count=1)
 
     # Slideshow-Zähler und Vorschaubilder
     html = re.sub(r'aria-label="(\d+) von (\d+)"', lambda m: f'aria-label="{m[1]} {cfg["of"]} {m[2]}"', html)
