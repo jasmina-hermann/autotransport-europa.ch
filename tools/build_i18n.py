@@ -269,7 +269,7 @@ def build(lang, idx):
     html = re.sub(r'(href|src)="(css|js|img|fonts)/', r'\1="../\2/', html)
 
     # Sprach-Hinweis: Deutsch ergänzen, eigene Sprache weglassen
-    de_link = '<a href="/" hreflang="de" lang="de" data-l="de"><img src="/img/flags/ch.svg" alt="" width="24" height="16">Deutsch</a>'
+    de_link = '<a href="/" hreflang="de" lang="de" data-l="de"><img src="/img/flags/ch.svg" alt="" width="24" height="16"><img src="/img/flags/de.svg" alt="" width="24" height="16">Deutsch</a>'
     html = html.replace('<a href="/en/" hreflang="en" lang="en" data-l="en">', de_link + '\n        <a href="/en/" hreflang="en" lang="en" data-l="en">', 1)
     html = re.sub(rf'\n\s*<a href="/{lang}/" hreflang="{lang}" lang="{lang}" data-l="{lang}">.*?</a>', '', html, count=1)
 
