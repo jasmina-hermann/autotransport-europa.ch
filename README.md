@@ -33,6 +33,7 @@ Wer einen deutschen Text ändert, muss die Übersetzung in `tools/build_i18n.py`
 - Galerie (Slideshow): Fotos liegen in `img/galerie/` (max. 1280 px, unter ca. 350 KB) und als Vorschau in `img/galerie/thumbs/` (240 × 180 px). Neues Foto: in beide Ordner legen und in `index.html` je eine Zeile bei `slides` und `ss-thumbs` kopieren.
 - Bilder im Ordner `img/` mit **gleichem Dateinamen** überschreiben. Empfohlene Grössen stehen auf den Platzhalterbildern. Fotos vorher komprimieren (z. B. squoosh.app, unter 300 KB pro Bild).
 - Bild-Beschreibungen (`alt="..."`) sinnvoll ausfüllen, das hilft bei Google.
+- Nach Änderungen an `css/style.css` oder `js/main.js` die Zahl hinter `?v=` in `index.html`, `agb.html` und `impressum.html` erhöhen (z. B. Datum) und `tools/build_i18n.py` laufen lassen. Sonst zeigen Browser bis zu 7 Tage die alte Datei.
 - Farben ändern: `--accent` usw. ganz oben in `css/style.css` (Braun #8B7355 (burlywood4) mit Verlauf, Babyblau #6CA6CD, Off-White #F6EFE4).
 - Schreibschrift für Highlight-Wörter: Wort in `<span class="script">…</span>` setzen. Schriften liegen lokal in `fonts/` (Outfit + Allura, beide frei unter OFL), kein Google-Fonts-Aufruf nötig.
 
