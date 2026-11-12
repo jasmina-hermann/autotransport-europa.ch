@@ -264,7 +264,6 @@ def build(lang, idx):
     html = re.sub(rf'(<a href="/{lang}/" hreflang="{lang}" lang="{lang}")>', r'\1 aria-current="page">', html)
     # relative Pfade eine Ebene höher
     html = re.sub(r'(href|src)="(css|js|img|fonts)/', r'\1="../\2/', html)
-    html = re.sub(r'href="(agb|impressum)\.html', r'href="../\1.html', html)
 
     # Slideshow-Zähler und Vorschaubilder
     html = re.sub(r'aria-label="(\d+) von (\d+)"', lambda m: f'aria-label="{m[1]} {cfg["of"]} {m[2]}"', html)
