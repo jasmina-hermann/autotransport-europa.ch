@@ -187,7 +187,6 @@ p { margin: 0 0 1em; }
 .contact-btn-icon.whatsapp { background: #25d366; }
 .contact-btn-icon.telefon { background: #007aff; }
 .contact-btn-icon.viber { background: #7360f2; }
-.contact-btn-icon.telegram { background: #2aabee; }
 .contact-btn-icon.email { background: var(--accent); }
 .contact-arrow { margin-left: auto; color: var(--accent-light); font-size: 1.1rem; }
 .contact-facts { list-style: none; padding: 0; margin: 12px 0 0; display: flex; flex-wrap: wrap; gap: 10px 28px; }
